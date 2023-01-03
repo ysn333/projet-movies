@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400;500;600;700&family=Kanit:ital,wght@0,400;1,300;1,400&family=Martian+Mono:wght@200;400;500&family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600&family=Rajdhani&family=Roboto+Mono:wght@200;400&family=Roboto:wght@100;300;400&family=Source+Code+Pro&family=Yeon+Sung&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,300;1,400&family=Martian+Mono:wght@200;400;500&family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600&family=Rajdhani&family=Roboto+Mono:wght@200;400&family=Roboto:wght@100;300;400&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bondi.css">
+    <title>MOVIES</title>
+</head>
+<body>
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="border-top: 4px solid #FFDF65;">
+            <div class="modal-header">
+                <h5 class="modal-title fw-bold" id="loginModalLabel">ACCOUNT LOGIN</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="userID" class="form-label">USERNAME</label>
+                    <input type="text" class="form-control bg-light border-0" id="userID" placeholder="">
+                </div>
+                <div class="mb-3">
+                    <label for="userPWD" class="form-label">PASSWORD</label>
+                    <input type="password" class="form-control bg-light border-0" id="userPWD" placeholder="">
+                </div>
+                <p><a href="#" class="text-decoration-none text-secondary"><small>REMEMBER ME</small></a></p>
+
+                <button  id="submit" type="button" class="btn pin-color rounded-pill pin-font-color-btn w-100 mb-4 fw-bold">LOGIN</button>
+
+                <div class="position-relative my-4">
+                    <div class="progress" style="height: 1px;">
+                        <div class="progress-bar pin-font-color-btn" role="progressbar" style="width: 100%; background-color:#E8E8DB;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span class="position-absolute translate-middle top-0 start-50 px-2 bg-white"><small>Forgot Password ？<a href="#" class="text-danger text-decoration-none" style="color:#ff795f;">Forgot Password ？</a></small></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img id="logo" src="img/img.png" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" 
+          data-bs-toggle="collapse" data-bs-target="#main" 
+          aria-controls="main" 
+          aria-expanded="false" 
+          aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="main">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3 active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2  p-lg-3" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2  p-lg-3" href="#">Tendances </a>
+              </li>   <li class="nav-item">
+                <a class="nav-link p-2  p-lg-3" href="#">About</a>
+              </li>   <li class="nav-item">
+                <a class="nav-link p-2  p-lg-3" href="#">Contact</a>
+              </li>
+            </ul>
+            <div class="search ps-3 pe-3 d-none d-lg-block">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <a id="btn-login" class="btn btn-primary rounded-pill main-btn" data-bs-toggle="modal" data-bs-target="#loginModal"  href="#">login</a>
+          </div>
+        </div>
+    </nav>
+    <div class="landing d-flex justify-content-around align-items-center">
+        <div class="text-center text-light">
+            <h1 class="display-2 fw-bolder text-capitalize ">GODZILLA</h1>
+            <div  id="inscription" class= "d-flex justify-content-center flex-grow-1   top-0 start-0 "mx-auto" style=" font-size: 9.5px;  margin-top: 50px; position: relative;">
+                <div class="d-flex justify-content-center p-3">ACTION</div>
+                <div class="d-flex justify-content-center p-3">ADVENTURE</div>
+                <div class="d-flex justify-content-center p-3">SCI-FI</div>
+            </div>
+            <a class="btn btn-primary rounded-pill main-btn" href="#">WATCH TRAVILER <i class="fa-regular fa-circle-play "></i></a>
+        </div>
+    </div>   
+          <!-- <h2>Watch at Sofilm</h2> -->
+        <div class="input-group mb-3 " >
+          <span class="input-group-text" id="addon-wrapping"><span class="material-symbols-outlined">
+              search
+              </span></span>
+          <input onkeyup="searchDataweb(this.value)" type="text" placeholder="Search By Nom" id="search" class="form-control searchDataweb" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+          <input onkeyup="searchDatamobil(this.value)" type="text" placeholder="Search By Nom" id="search" class="form-control searchDatamobil" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+          <select class="btn btn-outline-secondary  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"id="SelectTablaeu" >
+              <option selected> Select </option>
+              <option value="titre">Titre</option>
+              <option value="réalisateur">Réalisateur</option>
+              <option value="durée">Durée</option>
+              <option value="production">L'année de production</option>
+          </select>
+
+    <div id="showmovies">
+  
+  </div>
+<center>
+  <table class="table table-dark table-striped">
+    <tr>
+        <th>Un titre</th>
+        <th>Un réalisateur</th>
+        <th>Une durée</th>
+        <th>production</th>
+        <th>Poster</th>
+        <th>Festivals</th>
+        <th>Acteurs</th>
+    </tr>
+        <tbody id="tbody">
+            
+        </tbody>
+    </table>
+</center> 
+<center>
+  <div id="pagination" class="bd-copyright-area-seven gray-bg">
+    <div class="bd-custom-container">
+        <div class=" align-items-center">
+        <button id="paginate" class="btn" onclick="firstPage()">|<</button>
+        <button id="paginate" class="btn" onclick="previous()"><</button>
+        <span id="pageinfo"></span>
+        <button id="paginate" class="btn" onclick="nextPage()">></button>
+        <button id="paginate" class="btn" onclick="lastPage()">>|</button>
+      </div>
+    </div>
+  </div>
+</div>
+</center>
+    <div class="features text-center pt-5 pb-5 ">
+      <div class="container">
+        <div class="main-title mt-5 mb-5 position-relative">
+          <img class="mb-4" src="https://sofilm.fr/wp-content/uploads/2020/11/sofilm_logo.jpg" alt="">
+          <!-- <h2>Watch at Sofilm</h2> -->
+          <p class="text-black-50 text-uppercase">All Netflix Series High Quality </p>
+        </div>
+        <div class="row">
+          <!-- 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="feat">
+              
+              <div class="icons-holder position-relative">
+                <i class="fa-solid fa-1 position-absolute bottom-0 number"></i>
+                <i class="fa-solid fa-video fa-4x position-absolute bottom-0 icon "></i>
+              </div>
+              <h4 class="mb-3 mt-3 text-uppercase">Series</h4>
+              <p class="text-black-50 lh-lg">A series is a group of related things that are arranged in a particular order... For example, you might have a series of numbers like 1, 2, 3, 4, 5, or a series of events like the days of the week</p>
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="feat">  
+              <div class="icons-holder position-relative">
+                <i class="fa-solid fa-2 position-absolute bottom-0 number"></i>
+                <i class="fa-solid fa-tv fa-4x position-absolute bottom-0 icon "></i>
+              </div>
+              <h4 class="mb-3 mt-3 text-uppercase">TV Shows</h4>
+              <p class="text-black-50 lh-lg">TV shows can be broadcast on a variety of channels, including network television, cable channels, and streaming platforms</p>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="feat">
+              <div class="icons-holder position-relative">
+                <i class="fa-solid fa-3 position-absolute bottom-0 number"></i>
+                <i class="fa-solid fa-clapperboard fa-4x position-absolute bottom-0 icon "></i>
+              </div>
+              <h4 class="mb-3 mt-3 text-uppercase">Movies</h4>
+              <p class="text-black-50 lh-lg">A movie, also known as a film, is a story told on screen using a series of moving images. Movies are typically shown in theaters and can also be viewed on television,</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      </div>
+    <div class="our-work text-center pt-5 pb-5 ">
+      <div class="container">
+        <div class="main-title mt-5 mb-5 position-relative">
+          <img class="mb-4" src="https://sofilm.fr/wp-content/uploads/2020/11/sofilm_logo.jpg" alt="">
+          <!-- <h2>Watch at Sofilm</h2> -->
+          <p class="text-black-50 text-uppercase">All Tendances movies in sofilm <i class="fa-solid fa-clapperboard"></i> </p>
+        </div>
+        <ul class="list-unstyled d-flex justify-content-center mt-5 mb-5">
+          <li class="active rounded-pill">Jason tatham</li>
+          <li>One peice</li>          
+          <li>Matrix</li>
+          <li>Legend</li>
+          <li>Harry patter</li>
+        </ul>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="box mb-3 bg-white "  data-work="UN HOME EN COLERE  19 MAY,2022(USA)  ">
+              <img id="box-img"  src="https://fr.web.img2.acsta.net/pictures/21/06/07/14/25/1089996.jpg" alt="" >
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="box mb-3 bg-white "  data-work="The Meg 05 Janv,2016(Fran)">
+              <img id="box-img"   src="https://whatshotblog.com/wp-content/uploads/2018/08/meg_big_poster.jpg.webp" alt="" >
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="box mb-3 bg-white "  data-work="Mechanic  04 Mars,2019(USA)">
+              <img id="box-img"  src="https://m.media-amazon.com/images/M/MV5BMjYwODExNzUwMV5BMl5BanBnXkFtZTgwNTgwNjUyOTE@._V1_.jpg" alt="" >
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="box mb-3 bg-white "  data-work="Velozes & furiosos 04 Mars,2023(Espg)">
+              <img id="box-img"  src="https://images.justwatch.com/poster/176480394/s718/velozes-and-furiosos-hobbs-and-shaw.%7Bformat%7D" alt="" >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="techs pt-5 pb-5 text-center ">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-sm-6 col-md-4 col-lg-2 mt-3 mb-3  ">
+            <img class="img-fluid sponsors_movies" src="img/image(1).png" alt="">
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-2 mt-3 mb-3  ">
+            <img class="img-fluid sponsors_movies" src="img/image(2).png" alt="">
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-2 mt-3 mb-3  ">
+            <img class="img-fluid sponsors_movies" src="img/image(3).png" alt="">
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-2 mt-3 mb-3  ">
+            <img style="width: 80%;" class="img-fluid sponsors_movies" src="img/image(4).png" alt="">
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-2 mt-3 mb-3  ">
+            <img class="img-fluid sponsors_movies" src="img/iamge(5).png" alt="">
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-2 mt-3 mb-5  ">
+            <img id="" class="img-fluid sponsors_movies" src="img/image(6).png" alt="">
+         
+        </div>
+      </div>
+    </div>
+    
+    <!-- <div class="contact text-center pt-5 pb-5 text-light mt-5 mb-5">
+      <h2 class="contact-sm">contact Sofilm</h2>
+      
+      <p class="text-white-50">
+        consectetur adipisicing elit. nisi voluptas molestias repudiandae sint error quibusdam ipsa ducimus,
+      </p>
+      
+      <a class="btn btn-primary  rounded-pill main-btn text-uppercase" href="#">Contact New <i class="fa-solid fa-paper-plane"></i></a>
+    </div> -->
+
+    <div class="subscribe mt-5 pt-3 pb-3 text-center text-md-start">
+      <div class="container ">
+        <form class="row align-items-center">
+          <div class="col-md-6 col-lg-3">
+            <div class="fw-blod fs-5 mb-3">Subscribr to our Newsletter :</div>
+
+          </div>
+          <div class="col-md-6 col-lg-7 mb-5">
+            <input class="w-100 text-light p-2 bg-transparent" type="text" placeholder="Enter Email Address">
+          </div>
+          <div class="col-md-6 col-lg-2">
+            <a class="btn btn-primary  rounded-pill main-btn text-uppercase" href="#">Contact New <i class="fa-solid fa-paper-plane"></i></a>
+            <!-- <input class="btn rounded-pill " type="submit" value="Subscribe"> -->
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <div class="bd-copyright-area-seven gray-bg">
+          <div class="bd-custom-container">
+              <div class="row align-items-center">
+                  <div class="col-lg-4 order-3 order-lg-1">
+                      <div class="bd-copyright-six pb-10 text-center text-lg-start">
+                          <p class="m-0">© 2023 All rights reserved | Design &amp; Develop by <a href="https://themeforest.net/user/bdevs/portfolio">YSSN</a></p>
+                      </div>
+                  </div>
+                  <div class="col-lg-4 order-1 order-lg-2">
+                      <div class="bd-footer-widget-six-social pb-10 text-center">
+                          <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                          <a href="#" target="_blank"><i class="fab fa-google"></i></a>
+                      </div>
+                  </div>
+                  <div class="col-lg-4 order-2 order-lg-3">
+                      <div class="bd-copyright-six pb-10 text-lg-end text-center">
+                          <ul>
+                              <li><a href="contact.html">Privacy</a></li>
+                              <li><a href="contact.html">Terms</a></li>
+                              <li><a href="contact.html">Contact</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+  
+    <script src="js/movies.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js.map"></script>
+</body>
+</html>
+
+
+<!-- 
+// `XMLHttpRequest` object is being created and stored in the variable `https`
+var https = new XMLHttpRequest();
+https.responseType = 'json';
+https.open('GET' , 'js/movies.json' );
+https.onreadystatechange = _ =>{
+    // The if statement is checking the ``readyState`` and ``status`` properties of the ``https`` object.
+    if(https.readyState == 4  &&  https.status == 200){
+        data = https.response;
+
+afficher(data);
+// Sort a table , alphabetically from a _ z or z_b methode `sort()`
+document.getElementById('SelectTablaeu').onchange=function(){
+var SortTablaeu = document.getElementById('SelectTablaeu').value;
+if (SortTablaeu == "titre") {
+    data.sort(function(a,b) {
+        if(a.Titre.toUpperCase() < b.Titre.toUpperCase()) return -1;
+        if(a.Titre.toUpperCase() > b.Titre.toUpperCase()) return 1;
+        return 0;
+    });
+afficher(data);
+}
+else if (SortTablaeu == "réalisateur"){
+    data.sort(function(a,b) {
+        if(a.Réalisateur.toUpperCase() < b.Réalisateur.toUpperCase()) return -1;
+        if(a.Réalisateur.toUpperCase() > b.Réalisateur.toUpperCase()) return 1;
+        return 0;
+    });
+afficher(data);
+}
+else if (SortTablaeu == "durée"){
+    data.sort(function(a,b) {
+        if(a.Durée.toUpperCase() < b.Durée.toUpperCase()) return -1;
+        if(a.Durée.toUpperCase() > b.Durée.toUpperCase()) return 1;
+        return 0;
+    });
+afficher(data);
+}
+else if (SortTablaeu == "production"){
+    data.sort(function(a,b) {
+        if(a.L_année_de_production.toUpperCase() < b.L_année_de_production.toUpperCase()) return -1;
+        if(a.L_année_de_production.toUpperCase() > b.L_année_de_production.toUpperCase()) return 1;
+        return 0;
+    });
+afficher(data);
+
+}
+}}
+};
+
+
+    https.send();
+        function searchData(value){
+        var table='';
+            for (let i = 0; i < data.length; i++) {
+                
+                if(data[i].Titre.toLowerCase().includes(value.toLowerCase())){
+                    table += `
+                    <tr>
+                        <td><img class="align-middle" src="${data[i].Poster}"></td>
+                        <td class="align-middle">${data[i].Titre}</td>
+                        <td class="align-middle" id='Durée'>${data[i].Durée}</td>
+                        <td class="align-middle">${data[i].L_année_de_production}</td>
+                        <td class="align-middle">${data[i].Festivals}</td>
+                        <td class="align-middle"><lu>
+                            <li>${data[i].Acteurs[0].nom},${data[i].Acteurs[0].prénom},${data[i].Acteurs[0].nationalité}</li><br>
+                            <li>${data[i].Acteurs[1].nom},${data[i].Acteurs[1].prénom},${data[i].Acteurs[1].nationalité}</li>
+                        </lu></td>
+                        <td class="align-middle">${data[i].Réalisateur}</td>
+                    </tr>`;
+                }
+                document.getElementById('tbody').innerHTML = table;
+                showPageInfo();
+                }
+    }
+let numberOfitems = 3 ;
+let first = 0 ;
+let actualpage = 1 ;
+
+
+afficher(data);
+
+function nextPage() {
+if(first + numberOfitems <= data.length ) {
+    first += numberOfitems ;
+    actualpage++;
+
+    afficher(data)
+}
+nextPagestop() 
+}
+
+function firstPage() {
+first = 0;
+actualpage = 1 ;
+    afficher(data)
+}
+
+function previous() {
+if(first - numberOfitems >= 0) {
+    first -=numberOfitems;
+    actualpage--;
+    afficher(data)
+}
+}
+
+function lastPage() {
+let topnextpage = Math.ceil(data.length / numberOfitems);
+first = (topnextpage * numberOfitems) - numberOfitems;
+actualpage = topnextpage ;
+afficher(data)
+}
+
+function afficher(data){
+var table = '';
+        for (let i = first; i < first + numberOfitems; i++) {
+            if(i < data.length){
+            table += `
+                        <tr>
+                            <td class="align-middle" ><img src="${data[i].Poster}"></td>
+                            <td class="align-middle">${data[i].Titre}</td>
+                            <td class="align-middle" id='Durée'>${data[i].Durée}</td>
+                            <td class="align-middle">${data[i].L_année_de_production}</td>
+                            <td class="align-middle">${data[i].Festivals}</td>
+                            <td class="align-middle"><lu>
+                                <li>${data[i].Acteurs[0].nom}${data[i].Acteurs[0].prénom}${data[i].Acteurs[0].nationalité},</li><br>
+                                <li>${data[i].Acteurs[1].nom}${data[i].Acteurs[1].prénom}${data[i].Acteurs[1].nationalité}</li>
+                            </lu></td>
+                            <td class="align-middle" id='Réalisateur'>${data[i].Réalisateur}</td>
+                        </tr>
+                    `;
+            }
+            
+        }
+        // function nextPagestop() {
+        //     if(actualpage == 11) {
+        //         nextPage()
+        //     }
+        // }
+        window.addEventListener( 'load', () => {
+            startQueries()
+            })
+            const startQueries = () => {
+            let newQuery = window.matchMedia( ' ( max-width: 767px ) ' )
+            const queryListenChanges = query => {
+            if( query.matches ){
+                var div = '';
+                for (let i = first; i < first + numberOfitems; i++) {
+                    if(i < data.length){
+                        div += `
+
+                                    <p id='boxmovies' class="align-middle" ><img src="${data[i].Poster}"></p>
+                                    <p id='boxmovies' class="align-middle">${data[i].Titre}</p>
+                                    <p id='boxmovies' class="align-middle" id='Durée'>${data[i].Durée}</p>
+                                    <p id='boxmovies' class="align-middle">${data[i].L_année_de_production}</p>
+                                    <p id='boxmovies' class="align-middle">${data[i].Festivals}</p>
+                                    <p id='boxmovies' class="align-middle"><lu>
+                                        <li  id='boxmovies'>${data[i].Acteurs[0].nom}${data[i].Acteurs[0].prénom}${data[i].Acteurs[0].nationalité},</li><br>
+                                        <li  id='boxmovies'>${data[i].Acteurs[1].nom}${data[i].Acteurs[1].prénom}${data[i].Acteurs[1].nationalité}</li>
+                                    </lu></p>
+                                    <p id='boxmovies' class="align-middle" id='Réalisateur'>${data[i].Réalisateur}</p>
+                                    <p>_________________________________________________________________________________</p>
+                                _________________________________________________________
+                            `;
+                    }
+                    afficher(data)
+                    document.getElementById('divshowmovies').innerHTML = div ;
+                    document.getElementById('tbody').innerHTML = '' ;
+                    document.querySelector('.table').style.opacity = '0' ;
+                }
+            }else{
+
+                afficher(data)
+                document.getElementById('tbody').innerHTML = table ;
+                document.getElementById('divshowmovies').innerHTML = '' ;
+                document.querySelector('.table').style.opacity = '1' ;
+                
+                
+            }}
+            newQuery.addListener( queryListenChanges )
+            queryListenChanges( newQuery )
+            function nextPage() {
+                if(first + numberOfitems <= data.length ) {
+                    first += numberOfitems ;
+                    actualpage++;
+                
+                    afficher(data)
+                }
+               
+                }
+        }
+        }
+    
+function showPageInfo() {
+let topnextpage = Math.ceil(data.length / numberOfitems);
+document.getElementById('pageinfo').innerHTML = `
+Page ${actualpage} / ${topnextpage}
+`;
+} -->
